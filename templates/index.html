@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Store Item Demand Forecasting</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Store Item Demand Forecasting</h1>
+        <p>Predict future product demand using Machine Learning</p>
+    </header>
+
+    <main>
+
+        <section class="summary">
+            <div class="card">
+                <h3>Forecast Period</h3>
+                <p>Jan – Mar 2018</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Predictions</h3>
+                <p>45,000</p>
+            </div>
+
+            <div class="card">
+                <h3>ML Model</h3>
+                <p>Random Forest</p>
+            </div>
+        </section>
+
+        <section class="prediction-section">
+
+            <h2>Predict Store Item Sales</h2>
+
+            <div class="form-group">
+                <label for="date">Select Date</label>
+                <input type="date" id="date"
+                       min="2018-01-01" max="2018-03-31">
+            </div>
+
+            <div class="form-group">
+                <label for="store">Select Store</label>
+                <select id="store">
+                    <option value="">Choose Store</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="item">Select Item</label>
+                <select id="item">
+                    <option value="">Choose Item</option>
+                </select>
+            </div>
+
+            <button id="predictBtn" onclick="predictSales()">
+                Predict Sales
+            </button>
+
+            <div id="result"></div>
+
+        </section>
+
+    </main>
+
+    <script src="/static/script.js"></script>
+
+</body>
+</html>
